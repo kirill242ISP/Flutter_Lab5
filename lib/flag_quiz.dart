@@ -1,5 +1,7 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
+
 import 'styled_text.dart';
 
 final randomizer = Random();
@@ -14,7 +16,7 @@ class FlagQuiz extends StatefulWidget {
 }
 
 class _FlagQuizState extends State<FlagQuiz> {
-  var currentFlag = 1; 
+  var currentFlag = 1;
   var score = 0;
   var resultText = 'Чей это флаг?';
 
@@ -31,7 +33,9 @@ class _FlagQuizState extends State<FlagQuiz> {
 
   void nextFlag() {
     setState(() {
-      currentFlag = randomizer.nextInt(3) + 1; // Генерирует от 1 до 3
+      currentFlag =
+          randomizer.nextInt(3) +
+          1; // Генерирует от 1 до 3
       resultText = 'Чей это флаг?';
     });
   }
@@ -53,33 +57,45 @@ class _FlagQuizState extends State<FlagQuiz> {
         TextButton(
           onPressed: () => checkAnswer(1),
           style: TextButton.styleFrom(
-            foregroundColor: Colors.lime,
-            textStyle: const TextStyle(fontSize: 24),
+            foregroundColor: Colors.red,
+            textStyle: const TextStyle(
+              fontSize: 24,
+            ),
           ),
-          child: const Text('Вариант 1 (Россия)'),
+          child: const Text(
+            'Вариант 1 (Израиль)',
+          ),
         ),
         TextButton(
           onPressed: () => checkAnswer(2),
           style: TextButton.styleFrom(
-            foregroundColor: Colors.lime,
-            textStyle: const TextStyle(fontSize: 24),
+            foregroundColor: Colors.red,
+            textStyle: const TextStyle(
+              fontSize: 24,
+            ),
           ),
-          child: const Text('Вариант 2 (Франция)'),
+          child: const Text(
+            'Вариант 2 (Казахстан)',
+          ),
         ),
         TextButton(
           onPressed: () => checkAnswer(3),
           style: TextButton.styleFrom(
-            foregroundColor: Colors.lime,
-            textStyle: const TextStyle(fontSize: 24),
+            foregroundColor: Colors.red,
+            textStyle: const TextStyle(
+              fontSize: 24,
+            ),
           ),
-          child: const Text('Вариант 3 (Сербия)'),
+          child: const Text('Вариант 3 (США)'),
         ),
         const SizedBox(height: 30),
         TextButton(
           onPressed: nextFlag,
           style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
-            textStyle: const TextStyle(fontSize: 20),
+            foregroundColor: Colors.lime,
+            textStyle: const TextStyle(
+              fontSize: 20,
+            ),
           ),
           child: const Text('Следующий флаг ->'),
         ),
