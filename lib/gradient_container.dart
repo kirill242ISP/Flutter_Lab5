@@ -6,7 +6,7 @@ const endAlignment = Alignment.bottomCenter;
 
 class GradientContainer extends StatelessWidget {
   final Color color1;
-  final Color colorf2;
+  final Color color2;
   final Color color3;
 
   const GradientContainer(
