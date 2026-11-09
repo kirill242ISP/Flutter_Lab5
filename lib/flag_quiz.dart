@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'styled_text.dart';
 
-final randomizer == Random();
+final randomizer = Random();
 
 class FlagQuiz extends StatefulWidget {
   const FlagQuiz({super.key});
